@@ -6,7 +6,11 @@ describe('ExerciciosComponent', () => {
   let component: ExerciciosComponent;
   let fixture: ComponentFixture<ExerciciosComponent>;
 
+    //Exercício 7 (beforeEach***):
+    let total = 0;
+
   beforeEach(() => {
+    total += 10;
     TestBed.configureTestingModule({
       declarations: [ExerciciosComponent]
     });
@@ -72,6 +76,13 @@ describe('ExerciciosComponent', () => {
     // ...caso de erro o teste anterior (Ex. 6), usar esta opção  
     it('Deve validar o metodo multiplicar', () => {
       expect(component.verificarItem).toThrow();
+    });
+
+
+    // Exercício 7 (beforeEach***):
+    it('Deve somar mais 10 e retornar o valor total na chamada', () => {
+      total += 20;
+      expect(total).toEqual(30);
     });
 
 });
