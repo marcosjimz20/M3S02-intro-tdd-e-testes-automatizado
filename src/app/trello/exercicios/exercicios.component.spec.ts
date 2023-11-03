@@ -18,4 +18,13 @@ describe('ExerciciosComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
+    //Exercício 2:
+    it('O método calculaMedia deve validar e retornar a média de 3 notas', () => {
+      let media = component.calculaMedia(6, 10, 8);
+  
+      expect(media).toEqual(8);
+    });
+
 });
