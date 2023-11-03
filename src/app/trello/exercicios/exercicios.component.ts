@@ -28,4 +28,14 @@ export class ExerciciosComponent {
       return this.listaAlunos;
     }
 
+
+      //Exercicio 4
+  removerAluno(valor: string){
+    let index = this.listaAlunos.indexOf(valor);
+    if (index <= 0) {
+      this.listaAlunos.splice(index, 1);
+    }
+      return this.listaAlunos;
+  }
+
 }

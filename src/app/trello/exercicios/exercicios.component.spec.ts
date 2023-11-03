@@ -36,4 +36,21 @@ describe('ExerciciosComponent', () => {
     expect(array[0] == valor).toBe(true);
   });
 
+
+    // Exercício 4:
+    it('o método adicionarAluno deve aumentar o número de items do array', () => {
+      let tamanhoArray = component.adicionarAluno.length;
+      component.adicionarAluno('Aluno Novo');
+  
+      expect(component.adicionarAluno.length).toBeGreaterThan(tamanhoArray);
+    });
+  
+    // Parte 2 do Exercício 4:
+    it('o método removerItem deve disminuir o número de items do array', () => {
+      let tamanhoArray = component.removerAluno .length;
+      component.removerAluno('Aluno 3');
+  
+      expect(component.removerAluno.length).toBeLessThan(tamanhoArray);
+    });
+
 });
