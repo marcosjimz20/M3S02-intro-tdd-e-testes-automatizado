@@ -53,4 +53,13 @@ describe('ExerciciosComponent', () => {
       expect(component.removerAluno.length).toBeLessThan(tamanhoArray);
     });
 
+
+     // Exercício 5:
+    it('Deve verificar se existe o item “lasanha“ dentro do array', () => {
+      let item = 'lasanha';
+      let array = component.adicionarAluno(item);
+
+      expect(array[array.length - 1] == item).toContain("lasanha");
+    });
+
 });
