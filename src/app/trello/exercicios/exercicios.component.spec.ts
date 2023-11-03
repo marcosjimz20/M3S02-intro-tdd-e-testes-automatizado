@@ -62,4 +62,16 @@ describe('ExerciciosComponent', () => {
       expect(array[array.length - 1] == item).toContain("lasanha");
     });
 
+
+     // Exercício 6:
+    it('Deve lançar Throw caso não exista a variavél "lasanha" dentro do array', () => {
+      expect(() => {component.verificarItem("null")}).toThrowError("Não existe esse item dentro da lista");
+      expect(() => {component.verificarItem("null")}).toThrowError(TypeError);
+    });
+
+    // ...caso de erro o teste anterior (Ex. 6), usar esta opção  
+    it('Deve validar o metodo multiplicar', () => {
+      expect(component.verificarItem).toThrow();
+    });
+
 });

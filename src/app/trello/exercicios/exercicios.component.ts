@@ -38,4 +38,15 @@ export class ExerciciosComponent {
       return this.listaAlunos;
   }
 
+
+      //Exercício 6
+      verificarItem(item: string) {
+        if (item == "" || item == undefined || item == null) {
+            throw("Não existe esse item dentro da lista");
+        }
+  
+        this.listaAlunos.push(item);
+          return this.listaAlunos;
+    }
+
 }
