@@ -27,4 +27,13 @@ describe('ExerciciosComponent', () => {
       expect(media).toEqual(8);
     });
 
+
+      // Exercício 3:
+  it('O método adicionarAluno deve adicionar um item no início do array', () => {
+    let valor = 'Aluno 1';
+    let array = component.adicionarAluno(valor);
+
+    expect(array[0] == valor).toBe(true);
+  });
+
 });
